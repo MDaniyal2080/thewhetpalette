@@ -7,9 +7,7 @@ const nextConfig = {
       { protocol: 'https', hostname: 'picsum.photos' }
     ]
   },
-  experimental: {
-    typedRoutes: true
-  },
+  // No experimental features enabled
   eslint: {
     // Avoid blocking production builds due to lint errors; Vercel should not fail build for style issues
     ignoreDuringBuilds: true,
