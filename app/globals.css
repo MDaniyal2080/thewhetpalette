@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --radius: 12px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Elegant base styles */
+@layer base {
+  body {
+    @apply bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100 antialiased;
+    background-image: theme('backgroundImage.noise');
+    background-attachment: fixed;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight text-neutral-900 dark:text-neutral-100;
+  }
+  a {
+    @apply text-neutral-900 dark:text-neutral-100 hover:text-brand-600 dark:hover:text-brand-400 transition-colors;
+  }
+  ::selection {
+    @apply bg-brand-300/40 dark:bg-brand-600/40;
+  }
+}
+
+/* Reusable components */
+@layer components {
+  .container-section {
+    @apply container py-10 md:py-14 lg:py-16;
+  }
+  .muted {
+    @apply text-neutral-500 dark:text-neutral-400;
+  }
+  .headline-hero {
+    @apply text-4xl md:text-5xl lg:text-6xl font-display font-semibold leading-[1.05];
+  }
+  .subhead {
+    @apply text-neutral-700 dark:text-neutral-300 text-lg md:text-xl;
+  }
+}
